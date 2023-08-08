@@ -1,0 +1,11 @@
+h4 Новая группа
+form.form.form-horizontal(name="addGroupForm")
+  .form-group(ng-class="{ 'has-error':addGroupForm.name.$invalid }")
+    label.control-label.col-md-1 Название
+    .col-md-6
+      input.form-control(name="name", ng-model="$ctrl.group.name", required)
+
+  a.btn.btn-primary(
+    ng-disabled="addGroupForm.name.$invalid"
+    ng-click='$ctrl.addGroup()'
+    ) Сохранить

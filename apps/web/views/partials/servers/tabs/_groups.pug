@@ -1,0 +1,13 @@
+a.btn.btn-default.pull-right(ui-sref="servers.addGroup()") Добавить группу
+
+uib-tabset 
+    uib-tab(heading="Существующие группы")
+        table.table.table-bordered(
+            server-group-table
+            server-id="$ctrl.server._id"
+            style="width: 100%;"
+        )
+            thead
+                tr
+                    th Дата создания
+                    th Название группы   
